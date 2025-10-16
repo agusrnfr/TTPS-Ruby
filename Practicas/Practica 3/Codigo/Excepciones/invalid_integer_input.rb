@@ -1,0 +1,2 @@
+class InvalidIntegerInput < StandardError
+end
