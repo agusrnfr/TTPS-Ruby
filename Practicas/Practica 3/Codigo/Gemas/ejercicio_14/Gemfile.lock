@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorputs (0.2.3)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  colorputs
+
+BUNDLED WITH
+   2.5.16
