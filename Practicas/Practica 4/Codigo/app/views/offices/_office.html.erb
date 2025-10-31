@@ -1,0 +1,32 @@
+<div id="<%= dom_id office %>">
+  <p>
+    <strong>Nombre:</strong>
+    <%= office.name %>
+  </p>
+
+  <p>
+    <strong>Teléfono:</strong>
+    <%= office.phone_number %>
+  </p>
+
+  <p>
+    <strong>Dirección:</strong>
+    <%= office.address %>
+  </p>
+
+  <p>
+    <strong>Disponible:</strong>
+    <%= office.available ? "Sí" : "No" %>
+  </p>
+
+  <h3>Empleados</h3>
+  <% if office.employees.any? %>
+    <ul>
+      <% office.employees.each do |employee| %>
+        <li><%= link_to employee.name, employee_path(employee) %> - E-Number: <%= employee.e_number %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p><em>No hay empleados asignados a esta oficina</em></p>
+  <% end %>
+</div>

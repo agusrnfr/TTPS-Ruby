@@ -1,0 +1,11 @@
+es:
+  hello: "Hola"
+  activerecord:
+    models:
+      office: "Oficina"
+    attributes:
+      office:
+        name: "Nombre"
+        phone_number: "Teléfono"
+        address: "Dirección"
+        available: "Disponible"
