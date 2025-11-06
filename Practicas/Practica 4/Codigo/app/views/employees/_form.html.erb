@@ -1,10 +1,12 @@
 <%= form_with(model: employee) do |form| %>
   <% if employee.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+      <h2>
+        <%= t("employees.form.errors_title", count: employee.errors.count) %>
+      </h2>
 
       <ul>
-        <% office.errors.each do |error| %>
+        <% employee.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -12,23 +14,23 @@
   <% end %>
 
   <div>
-    <%= form.label :name, "Nombre:" %>
+    <%= form.label :name, t("employees.form.name") %>
     <%= form.text_field :name, required: true, maxlength: 150 %>
   </div>
 
   <div>
-    <%= form.label :e_number, "Número de Empleado:" %>
+    <%= form.label :e_number, t("employees.form.e_number") %>
     <%= form.number_field :e_number, required: true %>
   </div>
 
   <div>
-    <%= form.label :office_id, "Oficina:" %>
+    <%= form.label :office_id, t("employees.form.office") %>
     <%= form.collection_select :office_id, Office.all, :id, :name,
-                               { prompt: "Selecciona una oficina (opcional)" },
+                               { prompt: t("employees.form.office_prompt") },
                                { class: "form-select" } %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit t("employees.form.submit") %>
   </div>
 <% end %>

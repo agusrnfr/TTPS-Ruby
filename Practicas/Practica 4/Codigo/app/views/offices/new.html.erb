@@ -1,11 +1,11 @@
-<% content_for :title, "New office" %>
+<% content_for :title, t("offices.new.title") %>
 
-<h1>New office</h1>
+<h1> <%= t("offices.new.title") %> </h1>
 
 <%= render "form", office: @office %>
 
 <br>
 
 <div>
-  <%= link_to "Back to offices", offices_path %>
+  <%= link_to t("offices.back"), offices_path %>
 </div>

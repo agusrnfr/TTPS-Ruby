@@ -1,37 +1,37 @@
 <div id="<%= dom_id employee %>">
   <p>
-    <strong>Nombre:</strong>
+    <strong><%= t("employees.show.name") %>:</strong>
     <%= employee.name %>
   </p>
 
   <p>
-    <strong>Número de Empleado:</strong>
+    <strong><%= t("employees.show.e_number") %>:</strong>
     <%= employee.e_number %>
   </p>
 
   <p>
-    <strong>Oficina:</strong>
+    <strong><%= t("employees.show.office") %>:</strong>
     <% if employee.office %>
       <%= link_to employee.office.name, office_path(employee.office) %>
     <% else %>
-      <em>Sin oficina asignada</em>
+      <em><%= t("employees.show.no_office") %></em>
     <% end %>
   </p>
 
   <% if employee.office %>
     <p>
-      <strong>Teléfono de Oficina:</strong>
+      <strong><%= t("employees.show.office_phone") %>:</strong>
       <%= employee.office.phone_number %>
     </p>
 
     <p>
-      <strong>Dirección de Oficina:</strong>
+      <strong><%= t("employees.show.office_address") %>:</strong>
       <%= employee.office.address %>
     </p>
 
     <p>
-      <strong>Oficina Disponible:</strong>
-      <%= employee.office.available ? "Sí" : "No" %>
+      <strong><%= t("employees.show.office_available") %>:</strong>
+      <%= employee.office.available ? t("common.yes") : t("common.no") %>
     </p>
   <% end %>
 </div>

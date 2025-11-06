@@ -1,31 +1,72 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
   hello: "Hello world"
+
+  polite:
+    greetings:
+      - "Good day sir/ma’am."
+      - "Hello there!"
+      - "Greetings!"
+      - "Hi, how are you?"
+      - "Salutations!"
+
+  offices:
+    created: "Office was successfully created."
+    updated: "Office was successfully updated."
+    destroyed: "Office was successfully deleted."
+    title: "Offices"
+    back: "Back to offices"
+    form:
+      errors_title:
+        one: "1 error prohibited this office from being saved:"
+        other: "%{count} errors prohibited this office from being saved:"
+      name: "Name:"
+      phone_number: "Phone number:"
+      address: "Address:"
+      available: "Available:"
+      submit: "Save Office"
+    show:
+      name: "Name"
+      phone_number: "Phone Number"
+      address: "Address"
+      available: "Available"
+      employees_title: "Employees"
+      employee_number: "E-Number"
+      no_employees: "No employees assigned to this office"
+      see_office: "See Office"
+    new:
+      title: "New Office"
+    edit:
+      title: "Edit Office"
+
+  employees:
+    created: "Employee was successfully created."
+    updated: "Employee was successfully updated."
+    destroyed: "Employee was successfully deleted."
+    title: "Employees"
+    back: "Back to employees"
+    form:
+      errors_title:
+        one: "1 error prohibited this employee from being saved:"
+        other: "%{count} errors prohibited this employee from being saved:"
+      name: "Name:"
+      e_number: "Employee Number:"
+      office: "Office:"
+      office_prompt: "Select an office (optional)"
+      submit: "Save Employee"
+    show:
+      name: "Name"
+      e_number: "Employee Number"
+      office: "Office"
+      no_office: "No office assigned"
+      office_phone: "Office Phone"
+      office_address: "Office Address"
+      office_available: "Office Available"
+      see_employee: "See Employee"
+    new:
+      title: "New Employee"
+    edit:
+      title: "Edit Employee"
+
+  common:
+    yes: "Yes"
+    no: "No"

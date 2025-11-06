@@ -3,6 +3,6 @@
 <%= render @office %>
 
 <div>
-  <%= link_to "Edit this office", edit_office_path(@office) %> |
-  <%= link_to "Back to offices", offices_path %>
+  <%= link_to t("offices.edit.title"), edit_office_path(@office) %> |
+  <%= link_to t("offices.back"), offices_path %>
 </div>

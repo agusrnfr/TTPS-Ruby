@@ -1,16 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Offices" %>
+<% content_for :title, t("offices.title") %>
 
-<h1>Offices</h1>
+<h1> <%= t("offices.title") %> </h1>
 
 <div id="offices">
   <% @offices.each do |office| %>
     <%= render office %>
     <p>
-      <%= link_to "Show this office", office %>
+      <%= link_to t("offices.show.see_office"), office %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New office", new_office_path %>
+<%= link_to t("offices.new.title"), new_office_path %>

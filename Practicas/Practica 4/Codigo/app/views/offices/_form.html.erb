@@ -1,7 +1,9 @@
 <%= form_with(model: office) do |form| %>
   <% if office.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(office.errors.count, "error") %> prohibited this office from being saved:</h2>
+      <h2>
+        <%= t("offices.form.errors_title", count: office.errors.count) %>
+      </h2>
 
       <ul>
         <% office.errors.each do |error| %>
@@ -12,26 +14,26 @@
   <% end %>
 
   <div>
-    <%= form.label :name, "Nombre:" %>
+    <%= form.label :name, t("offices.form.name") %>
     <%= form.text_field :name, required: true, maxlength: 255 %>
   </div>
 
   <div>
-    <%= form.label :phone_number, "Teléfono:" %>
+    <%= form.label :phone_number, t("offices.form.phone_number") %>
     <%= form.text_field :phone_number, required: true, maxlength: 30 %>
   </div>
 
   <div>
-    <%= form.label :address, "Dirección:" %>
+    <%= form.label :address, t("offices.form.address") %>
     <%= form.text_area :address, rows: 3 %>
   </div>
 
   <div>
-    <%= form.label :available, "Disponible:" %>
+    <%= form.label :available, t("offices.form.available") %>
     <%= form.check_box :available %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit t("offices.form.submit") %>
   </div>
 <% end %>

@@ -1,5 +1,6 @@
 es:
   hello: "Hola"
+
   activerecord:
     models:
       office: "Oficina"
@@ -9,3 +10,73 @@ es:
         phone_number: "Teléfono"
         address: "Dirección"
         available: "Disponible"
+
+  polite:
+    greetings:
+      - "Buen día, señor/a."
+      - "¡Hola!"
+      - "¡Saludos!"
+      - "¡Hola! ¿Cómo estás?"
+      - "¡Muy buenas!"
+
+  offices:
+    created: "La oficina fue creada exitosamente."
+    updated: "La oficina fue actualizada exitosamente."
+    destroyed: "La oficina fue eliminada correctamente."
+    title: "Oficinas"
+    back: "Volver a oficinas"
+    form:
+      errors_title:
+        one: "1 error impidió guardar esta oficina:"
+        other: "%{count} errores impidieron guardar esta oficina:"
+      name: "Nombre:"
+      phone_number: "Teléfono:"
+      address: "Dirección:"
+      available: "Disponible:"
+      submit: "Guardar Oficina"
+    show:
+      name: "Nombre"
+      phone_number: "Teléfono"
+      address: "Dirección"
+      available: "Disponible"
+      employees_title: "Empleados"
+      employee_number: "Número de Empleado"
+      no_employees: "No hay empleados asignados a esta oficina"
+      see_office: "Ver Oficina"
+    new:
+      title: "Nueva Oficina"
+    edit:
+      title: "Editar Oficina"
+
+  employees:
+    created: "El empleado fue creado exitosamente."
+    updated: "El empleado fue actualizado exitosamente."
+    destroyed: "El empleado fue eliminado correctamente."
+    title: "Empleados"
+    back: "Volver a empleados"
+    form:
+      errors_title:
+        one: "1 error impidió guardar este empleado:"
+        other: "%{count} errores impidieron guardar este empleado:"
+      name: "Nombre:"
+      e_number: "Número de Empleado:"
+      office: "Oficina:"
+      office_prompt: "Selecciona una oficina (opcional)"
+      submit: "Guardar Empleado"
+    show:
+      name: "Nombre"
+      e_number: "Número de Empleado"
+      office: "Oficina"
+      no_office: "Sin oficina asignada"
+      office_phone: "Teléfono de Oficina"
+      office_address: "Dirección de Oficina"
+      office_available: "Oficina Disponible"
+      see_employee: "Ver Empleado"
+    new:
+      title: "Nuevo Empleado"
+    edit:
+      title: "Editar Empleado"
+
+  common:
+    yes: "Sí"
+    no: "No"
